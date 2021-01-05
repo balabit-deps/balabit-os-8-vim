@@ -202,7 +202,7 @@ func Test_swapfile_delete()
   if !IsRoot()
     " Write the swapfile with a modified PID, now it will be automatically
     " deleted. Process one should never be Vim.
-    let swapfile_bytes[24:27] = 0z01000000
+    let swapfile_bytes[24:27] = 0zdead0000
     call writefile(swapfile_bytes, swapfile_name)
     let s:swapname = ''
     split XswapfileText
