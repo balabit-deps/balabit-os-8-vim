@@ -1,3 +1,9 @@
+vim (2:8.1.2269-1ubuntu5bb1) focal; urgency=medium
+
+  * Balabit patched version
+
+ -- Balabit Platform Team <devnull@dev.null>  Tue, 05 Jan 2021 14:34:49 +0100
+
 vim (2:8.1.2269-1ubuntu5) focal; urgency=medium
 
   * Increase Test_mode_message_at_leaving_insert_with_esc_mapped timeout for
