@@ -8,3 +8,8 @@ update-upstart-syntax.patch
 ubuntu-series-support.patch
 ubuntu-mouse-off.patch
 riscv64-test-timeout.patch
+CVE-2021-3770-1.patch
+CVE-2021-3770-2.patch
+CVE-2021-3778.patch
+CVE-2021-3796.patch
+riscv64-flaky-test.patch
