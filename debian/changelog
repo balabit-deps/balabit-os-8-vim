@@ -1,3 +1,25 @@
+vim (2:8.1.2269-1ubuntu5.3) focal-security; urgency=medium
+
+  * SECURITY UPDATE: Fix heap-based buffer overflow when using :retab with
+    large value
+    - debian/patches/CVE-2021-3770-1.patch: Check vartabstop contains positive
+      number in src/indent.c.
+    - debian/patches/CVE-2021-3770-2.patch: Fix memory leak for :retab with
+      invalid argument
+    - CVE-2021-3770
+  * SECURITY UPDATE: Fix heap-based buffer overflow when reading beyond end of
+    line with invalid utf-8 character
+    - debian/patches/CVE-2021-3778.patch: Validate encoding of character before
+      advancing line in regexp_nfa.c.
+    - CVE-2021-3778
+  * SECURITY UPDATE: Fix use after free when replacing
+    - debian/patches/CVE-2021-3796.patch: Get the line pointer after calling
+      ins_copychar() in src/normal.c.
+    - CVE-2021-3796
+  * Fix failing flaky test for riscv64 builds.
+
+ -- Spyros Seimenis <spyros.seimenis@canonical.com>  Mon, 20 Sep 2021 14:42:42 +0300
+
 vim (2:8.1.2269-1ubuntu5bb1) focal; urgency=medium
 
   * Balabit patched version

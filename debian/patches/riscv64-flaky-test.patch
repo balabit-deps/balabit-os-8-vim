@@ -1,0 +1,69 @@
+From 41d4299f26cc98e253f9c63f8adc9dbb9d49ed5c Mon Sep 17 00:00:00 2001
+From: Bram Moolenaar <Bram@vim.org>
+Date: Sun, 3 May 2020 16:29:50 +0200
+Subject: [PATCH] patch 8.2.0687: some tests do not work on FreeBSD
+
+Problem:    Some tests do not work on FreeBSD.
+Solution:   Enable modeline.  Use WaitFor() in more cases. (Ozaki Kiichi,
+            closes #6036)
+---
+ src/testdir/test_quickfix.vim |  2 +-
+ src/testdir/test_terminal.vim | 18 ++++++++++--------
+ src/version.c                 |  2 ++
+ 3 files changed, 13 insertions(+), 9 deletions(-)
+
+Index: vim-8.1.2269/src/testdir/test_terminal.vim
+===================================================================
+--- vim-8.1.2269.orig/src/testdir/test_terminal.vim
++++ vim-8.1.2269/src/testdir/test_terminal.vim
+@@ -884,7 +884,7 @@ func Test_terminal_composing_unicode()
+   enew
+   let buf = term_start(cmd, {'curwin': bufnr('')})
+   let g:job = term_getjob(buf)
+-  call term_wait(buf, 50)
++  call WaitFor({-> term_getline(buf, 1) !=# ''}, 1000)
+ 
+   if has('win32')
+     call assert_equal('cmd', job_info(g:job).cmd[0])
+@@ -894,10 +894,11 @@ func Test_terminal_composing_unicode()
+ 
+   " ascii + composing
+   let txt = "a\u0308bc"
+-  call term_sendkeys(buf, "echo " . txt . "\r")
++  call term_sendkeys(buf, "echo " . txt)
+   call term_wait(buf, 50)
+   call assert_match("echo " . txt, term_getline(buf, lnum[0]))
+-  call assert_equal(txt, term_getline(buf, lnum[0] + 1))
++  call term_sendkeys(buf, "\<cr>")
++  call WaitForAssert({-> assert_equal(txt, term_getline(buf, lnum[0] + 1))}, 1000)
+   let l = term_scrape(buf, lnum[0] + 1)
+   call assert_equal("a\u0308", l[0].chars)
+   call assert_equal("b", l[1].chars)
+@@ -905,10 +906,11 @@ func Test_terminal_composing_unicode()
+ 
+   " multibyte + composing
+   let txt = "\u304b\u3099\u304e\u304f\u3099\u3052\u3053\u3099"
+-  call term_sendkeys(buf, "echo " . txt . "\r")
++  call term_sendkeys(buf, "echo " . txt)
+   call term_wait(buf, 50)
+   call assert_match("echo " . txt, term_getline(buf, lnum[1]))
+-  call assert_equal(txt, term_getline(buf, lnum[1] + 1))
++  call term_sendkeys(buf, "\<cr>")
++  call WaitForAssert({-> assert_equal(txt, term_getline(buf, lnum[1] + 1))}, 1000)
+   let l = term_scrape(buf, lnum[1] + 1)
+   call assert_equal("\u304b\u3099", l[0].chars)
+   call assert_equal("\u304e", l[1].chars)
+@@ -918,10 +920,11 @@ func Test_terminal_composing_unicode()
+ 
+   " \u00a0 + composing
+   let txt = "abc\u00a0\u0308"
+-  call term_sendkeys(buf, "echo " . txt . "\r")
++  call term_sendkeys(buf, "echo " . txt)
+   call term_wait(buf, 50)
+   call assert_match("echo " . txt, term_getline(buf, lnum[2]))
+-  call assert_equal(txt, term_getline(buf, lnum[2] + 1))
++  call term_sendkeys(buf, "\<cr>")
++  call WaitForAssert({-> assert_equal(txt, term_getline(buf, lnum[2] + 1))}, 1000)
+   let l = term_scrape(buf, lnum[2] + 1)
+   call assert_equal("\u00a0\u0308", l[3].chars)
+ 
