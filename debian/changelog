@@ -1,3 +1,29 @@
+vim (2:8.1.2269-1ubuntu5.4) focal-security; urgency=medium
+
+  * SECURITY UPDATE: Fix heap-based buffer overflow when buffer name is very
+    long
+    - debian/patches/CVE-2021-3872.patch: Make sure not to go over the end of
+      the buffer in src/drawscreen.c, src/testdir/test_statusline.vim.
+    - CVE-2021-3872
+  * SECURITY UPDATE: Fix heap-based buffer overflow when scrolling without a
+    valid screen
+    - debian/patches/CVE-2021-3903.patch: Do not set VALID_BOTLINE in w_valid
+      in src/move.c, src/testdir/test_normal.vim.
+    - CVE-2021-3903
+  * SECURITY UPDATE: Fix heap-based buffer overflow when reading character
+    past end of line
+    - debian/patches/CVE-2021-3927.patch: Correct the cursor column in
+      src/ex_docmd.c, src/testdir/test_put.vim.
+    - CVE-2021-3927
+  * SECURITY UPDATE: Fix stack-based buffer overflow when reading
+    uninitialized memory when giving spell suggestions
+    - debian/patches/CVE-2021-3928.patch: Check that preword is not empty in
+      src/spellsuggest.c, src/testdir/test_spell.vim.
+    - CVE-2021-3928
+  * Fix flaky vim terminal mode test
+
+ -- Spyros Seimenis <spyros.seimenis@canonical.com>  Mon, 08 Nov 2021 15:21:34 +0100
+
 vim (2:8.1.2269-1ubuntu5.3) focal-security; urgency=medium
 
   * SECURITY UPDATE: Fix heap-based buffer overflow when using :retab with

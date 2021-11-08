@@ -1,0 +1,14 @@
+Description: Fix flaky vim test
+Author: Spyros Seimenis <spyros.seimenis@canonical.com>
+Last-Update: 2021-11-05
+
+--- vim-8.1.2269.orig/src/testdir/test_terminal.vim
++++ vim-8.1.2269/src/testdir/test_terminal.vim
+@@ -360,6 +360,7 @@ func Test_terminal_postponed_scrollback(
+   call VerifyScreenDump(buf, 'Test_terminal_02', {})
+ 
+   " Back to Terminal-Job mode, text will scroll and show the extra line.
++  call term_wait(buf, 1000)
+   call term_sendkeys(buf, "a")
+   call VerifyScreenDump(buf, 'Test_terminal_03', {})
+ 
