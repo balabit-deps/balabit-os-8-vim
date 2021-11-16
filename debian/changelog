@@ -1,3 +1,9 @@
+vim (2:8.1.2269-1ubuntu5.4bb1) focal; urgency=medium
+
+  * Balabit patched version
+
+ -- Balabit Platform Team <devnull@dev.null>  Tue, 16 Nov 2021 18:15:46 +0100
+
 vim (2:8.1.2269-1ubuntu5.4) focal-security; urgency=medium
 
   * SECURITY UPDATE: Fix heap-based buffer overflow when buffer name is very
