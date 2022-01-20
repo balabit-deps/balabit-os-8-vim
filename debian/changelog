@@ -1,3 +1,32 @@
+vim (2:8.1.2269-1ubuntu5.6) focal-security; urgency=medium
+
+  * SECURITY UPDATE: Use-after-free issue in regular expression engine when
+    using a mark, could lead to a denial of service or code execution.
+    - debian/patches/CVE-2021-3974.patch: Ensure check for free is made when
+      processing mark in src/regexp_nfa.c, src/testdir/test_regexp_latin.vim
+    - CVE-2021-3974
+  
+  * SECURITY UPDATE: Heap-based buffer overflow could lead to a denial of
+    service or possible code execution when C-indenting
+    - debian/patches/CVE-2021-3984.patch: Fix memory access issue by correctly
+      dereferencing cursor position in src/cindent.c and
+      src/testdir/test_cindent.vim
+    - CVE-2021-3984
+  
+  * SECURITY UPDATE: Heap-based buffer overflow could lead to a denial of
+    service when help functions are provided with long command strings
+    - debian/patches/CVE-2021-4019.patch: Fix handling of strcpy to use safer
+      vim_snprintf in src/ex_cmds.c and src/testdir/test_help.vim
+    - CVE-2021-4019
+
+  * SECURITY UPDATE: Use-after-free issue in open command can lead to a denial
+    of service or possible code execution
+    - debian/patches/CVE-2021-4069.patch: Fix issue making a copy of the
+      current line and its address in src/ex_docmd.c
+    - CVE-2021-4069
+
+ -- Ray Veldkamp <ray.veldkamp@canonical.com>  Thu, 20 Jan 2022 22:59:01 +1100
+
 vim (2:8.1.2269-1ubuntu5.4) focal-security; urgency=medium
 
   * SECURITY UPDATE: Fix heap-based buffer overflow when buffer name is very
