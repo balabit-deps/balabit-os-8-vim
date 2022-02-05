@@ -1,3 +1,9 @@
+vim (2:8.1.2269-1ubuntu5.7bb1) focal; urgency=medium
+
+  * Balabit patched version
+
+ -- Balabit Platform Team <devnull@dev.null>  Sat, 05 Feb 2022 16:47:21 +0100
+
 vim (2:8.1.2269-1ubuntu5.7) focal-security; urgency=medium
 
   * No-change rebuild to fix cdimage build on riscv64
