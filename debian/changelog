@@ -1,3 +1,9 @@
+vim (2:8.1.2269-1ubuntu5.7) focal-security; urgency=medium
+
+  * No-change rebuild to fix cdimage build on riscv64
+
+ -- Ray Veldkamp <ray.veldkamp@canonical.com>  Tue, 01 Feb 2022 20:16:32 +1100
+
 vim (2:8.1.2269-1ubuntu5.6bb1) focal; urgency=medium
 
   * Balabit patched version
