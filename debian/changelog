@@ -1,3 +1,43 @@
+vim (2:8.1.2269-1ubuntu5.9) focal-security; urgency=medium
+
+  * No-change rebuild to republish missing architecture binaries in the
+    security pocket (LP: #1989973) 
+
+ -- Nishit Majithia <nishit.majithia@canonical.com>  Mon, 19 Sep 2022 10:29:57 +0530
+
+vim (2:8.1.2269-1ubuntu5.8) focal-security; urgency=medium
+
+  * SECURITY UPDATE: heap based buffer overflow in spelling suggestion
+    function
+    - debian/patches/CVE-2022-0943.patch: adjust "badlen".
+    - CVE-2022-0943
+  * SECURITY UPDATE: use-after-free when processing regular expressions in old
+    engine
+    - debian/patches/CVE-2022-1154.patch: after getting mark get the line
+      again.
+    - CVE-2022-1154
+  * SECURITY UPDATE: buffer overflow when using invalid command with composing
+    chars
+    - debian/patches/CVE-2022-1616.patch: check that the whole character fits
+      in the buffer.
+    - CVE-2022-1616
+  * SECURITY UPDATE: heap buffer overflow when processing CTRL-W in latin1
+    encoding
+    - debian/patches/CVE-2022-1619.patch: check already being at the start of
+      the command line.
+    - CVE-2022-1619
+  * SECURITY UPDATE: NULL pointer access when using invalid pattern
+    - debian/patches/CVE-2022-1620.patch: check for failed regexp program.
+    - CVE-2022-1620
+  * SECURITY UPDATE: heap buffer overflow when processing invalid character
+    added to word list
+    - debian/patches/CVE-2022-1621.patch: check for a valid word string.
+    - debian/patches/remove_test_spell_single_word.patch: removal of test
+      test_spell_single_word from src/testdir/test_spell.vim
+    - CVE-2022-1621
+
+ -- Nishit Majithia <nishit.majithia@canonical.com>  Tue, 13 Sep 2022 19:18:19 +0530
+
 vim (2:8.1.2269-1ubuntu5.7bb1) focal; urgency=medium
 
   * Balabit patched version
