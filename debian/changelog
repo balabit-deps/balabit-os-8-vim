@@ -1,3 +1,20 @@
+vim (2:8.1.2269-1ubuntu5.11) focal-security; urgency=medium
+
+  * SECURITY UPDATE: illegal memory access with bracketed paste in Ex mode
+    - debian/patches/CVE-2022-0392.patch: reverse space for the trailing NUL
+    - CVE-2022-0392
+  * SECURITY UPDATE: retab may cause illegal memory access
+    - debian/patches/CVE-2022-0417.patch: limit the value of tabstop
+    - CVE-2022-0417
+
+ -- Mark Esler <mark.esler@canonical.com>  Wed, 11 Jan 2023 17:54:11 -0600
+
+vim (2:8.1.2269-1ubuntu5.10) focal; urgency=medium
+
+  * Update supported Ubuntu and Debian codenames (LP: #1996087).
+
+ -- Simon Quigley <tsimonq2@ubuntu.com>  Wed, 09 Nov 2022 17:57:59 +0100
+
 vim (2:8.1.2269-1ubuntu5.9) focal-security; urgency=medium
 
   * No-change rebuild to republish missing architecture binaries in the
