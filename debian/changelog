@@ -1,3 +1,9 @@
+vim (2:8.1.2269-1ubuntu5.13bb1) focal; urgency=medium
+
+  * Balabit patched version
+
+ -- Balabit Platform Team <devnull@dev.null>  Sat, 08 Apr 2023 16:27:20 +0200
+
 vim (2:8.1.2269-1ubuntu5.13) focal-security; urgency=medium
 
   * SECURITY UPDATE: use after free
