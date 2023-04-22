@@ -1,3 +1,9 @@
+vim (2:8.1.2269-1ubuntu5.14bb1) focal; urgency=medium
+
+  * Balabit patched version
+
+ -- Balabit Platform Team <devnull@dev.null>  Sat, 22 Apr 2023 16:30:29 +0200
+
 vim (2:8.1.2269-1ubuntu5.14) focal-security; urgency=medium
 
   * SECURITY UPDATE: out-of-bound read vulnerability
