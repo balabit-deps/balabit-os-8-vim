@@ -1,3 +1,15 @@
+vim (2:8.1.2269-1ubuntu5.15) focal-security; urgency=medium
+
+  * SECURITY UPDATE: NULL pointer dereference when processing register content 
+    - debian/patches/CVE-2023-2609.patch: check "y_array" is not NULL.
+    - CVE-2023-2609
+  * SECURITY UPDATE: integer overflow and excessive memory consumption when
+    allocating memory for tilde processing in pattern
+    - debian/patches/CVE-2023-2610.patch: limit the text length to MAXCOL.
+    - CVE-2023-2610
+
+ -- Camila Camargo de Matos <camila.camargodematos@canonical.com>  Wed, 24 May 2023 11:28:35 -0300
+
 vim (2:8.1.2269-1ubuntu5.14bb1) focal; urgency=medium
 
   * Balabit patched version
