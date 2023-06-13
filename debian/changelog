@@ -1,3 +1,9 @@
+vim (2:8.1.2269-1ubuntu5.15bb1) focal; urgency=medium
+
+  * Balabit patched version
+
+ -- Balabit Platform Team <devnull@dev.null>  Tue, 13 Jun 2023 21:10:05 +0000
+
 vim (2:8.1.2269-1ubuntu5.15) focal-security; urgency=medium
 
   * SECURITY UPDATE: NULL pointer dereference when processing register content 
