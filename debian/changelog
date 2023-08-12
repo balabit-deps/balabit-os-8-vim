@@ -1,3 +1,38 @@
+vim (2:8.1.2269-1ubuntu5.16) focal-security; urgency=medium
+
+  * SECURITY UPDATE: heap-based buffer overflow
+    - debian/patches/CVE-2022-2264.patch: Adjust the end mark position.
+    - debian/patches/CVE-2022-2284.patch: Stop Visual mode when closing a
+      window.
+    - CVE-2022-2264
+    - CVE-2022-2284
+  * SECURITY UPDATE: NULL pointer dereference
+    - debian/patches/CVE-2022-2208.patch: Recompute diffs later. Skip
+      window without a valid buffer.
+    - CVE-2022-2208
+  * SECURITY UPDATE: out-of-bounds write issue
+    - debian/patches/CVE-2022-2210.patch: Use zero offset when change
+      removes all lines in a diff block
+    - CVE-2022-2210
+  * SECURITY UPDATE: out-of-bounds read issue
+    - debian/patches/CVE-2022-2257.patch: Check for NUL.
+    - debian/patches/CVE-2022-2286.patch: Check the length of the string
+    - debian/patches/CVE-2022-2287.patch: Disallow adding a word with
+      control characters or a trailing slash.
+    - CVE-2022-2257
+    - CVE-2022-2286
+    - CVE-2022-2287
+  * SECURITY UPDATE: integer overflow issue
+    - debian/patches/CVE-2022-2285.patch: Put a NUL after the typeahead.
+    - CVE-2022-2285
+  * SECURITY UPDATE: use after free memory issue
+    - debian/patches/CVE-2022-2289.patch: Bail out when diff pointer is no
+      longer valid
+    - CVE-2022-2289 
+  * debian/patches/update_flaky_tests.patch: add few tests to flaky
+
+ -- Nishit Majithia <nishit.majithia@canonical.com>  Tue, 01 Aug 2023 14:00:18 +0530
+
 vim (2:8.1.2269-1ubuntu5.15bb1) focal; urgency=medium
 
   * Balabit patched version

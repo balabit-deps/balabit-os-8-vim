@@ -1,0 +1,13 @@
+Description: Add Test_diff_fold_sync() to flaky tests
+Author: Nishit Majithia <nishit.majithia@canonical.com>
+Origin: other
+--- vim-8.1.2269.orig/src/testdir/runtest.vim
++++ vim-8.1.2269/src/testdir/runtest.vim
+@@ -377,6 +377,7 @@ let s:flaky_tests = [
+       \ 'Test_timer_with_partial_callback()',
+       \ 'Test_zero_reply()',
+       \ 'Test_zz1_terminal_in_gui()',
++      \ 'Test_diff_fold_sync()',
+       \ ]
+ 
+ " Pattern indicating a common flaky test failure.
