@@ -1,3 +1,21 @@
+vim (2:8.1.2269-1ubuntu5.17) focal-security; urgency=medium
+
+  * SECURITY UPDATE: out-of-bounds write issue
+    - debian/patches/CVE-2022-2598.patch: Make sure the line number does
+      not go below one.
+    - CVE-2022-2598
+  * SECURITY UPDATE: use after free memory issue
+    - debian/patches/CVE-2022-3016.patch: Return QF_ABORT and handle it.
+    - debian/patches/CVE-2022-3037.patch: Do not handle errors if there
+      aren't any
+    - debian/patches/CVE-2022-3099.patch: Do not check breakpoint for
+      non-existing line
+    - CVE-2022-3016
+    - CVE-2022-3037
+    - CVE-2022-3099
+
+ -- Nishit Majithia <nishit.majithia@canonical.com>  Fri, 18 Aug 2023 09:11:54 +0530
+
 vim (2:8.1.2269-1ubuntu5.16bb1) focal; urgency=medium
 
   * Balabit patched version
