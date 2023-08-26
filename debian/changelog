@@ -1,3 +1,9 @@
+vim (2:8.1.2269-1ubuntu5.17bb1) focal; urgency=medium
+
+  * Balabit patched version
+
+ -- Balabit Platform Team <devnull@dev.null>  Sat, 26 Aug 2023 14:24:37 +0000
+
 vim (2:8.1.2269-1ubuntu5.17) focal-security; urgency=medium
 
   * SECURITY UPDATE: out-of-bounds write issue
