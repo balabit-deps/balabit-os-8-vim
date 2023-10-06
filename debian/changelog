@@ -1,3 +1,38 @@
+vim (2:8.1.2269-1ubuntu5.18) focal-security; urgency=medium
+
+  * SECURITY UPDATE: heap-based buffer overflow
+    - debian/patches/CVE-2022-3234.patch: Check for replacing NUL after Tab.
+    - debian/patches/CVE-2022-3520.patch: Check that the column does not
+      become negative.
+    - CVE-2022-3234
+    - CVE-2022-3520
+  * SECURITY UPDATE: use after free memory issue
+    - debian/patches/CVE-2022-3256.patch: Copy the mark before editing
+      another buffer
+    - debian/patches/CVE-2022-3352.patch: Disallow deleting the current
+      buffer to avoid using freed memory
+    - debian/patches/CVE-2022-3591.patch: Disallow navigating to a dummy
+      buffer
+    - debian/patches/CVE-2022-3705.patch: Set the quickfix-busy flag while
+      filling the buffer
+    - debian/patches/CVE-2022-4292.patch: Bail out if the window no longer
+      exists.
+    - CVE-2022-3256
+    - CVE-2022-3352
+    - CVE-2022-3591
+    - CVE-2022-3705
+    - CVE-2022-4292
+  * SECURITY UPDATE: stack-based buffer overflow
+    - debian/patches/CVE-2022-3324.patch: Make sure the window width does
+      not become negative
+    - CVE-2022-3324
+  * SECURITY UPDATE: incorrect floating point comparison
+    - debian/patches/CVE-2022-4293.patch: fix floating point comparison
+    - CVE-2022-4293
+  * debian/patches/fix_flaky_tests.patch: skip failing test
+
+ -- Nishit Majithia <nishit.majithia@canonical.com>  Fri, 06 Oct 2023 13:50:32 +0530
+
 vim (2:8.1.2269-1ubuntu5.17) focal-security; urgency=medium
 
   * SECURITY UPDATE: out-of-bounds write issue
