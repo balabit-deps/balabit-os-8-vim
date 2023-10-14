@@ -108,3 +108,13 @@ CVE-2022-2598.patch
 CVE-2022-3016.patch
 CVE-2022-3037.patch
 CVE-2022-3099.patch
+CVE-2022-3234.patch
+CVE-2022-3256.patch
+CVE-2022-3324.patch
+CVE-2022-3352.patch
+CVE-2022-3520.patch
+CVE-2022-3591.patch
+CVE-2022-3705.patch
+CVE-2022-4293.patch
+CVE-2022-4292.patch
+fix_flaky_tests.patch
