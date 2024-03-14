@@ -1,3 +1,12 @@
+vim (2:8.1.2269-1ubuntu5.22) focal-security; urgency=medium
+
+  * SECURITY UPDATE: stack based buffer overflow
+    - debian/patches/CVE-2024-22667.patch: passes error buffer length down
+      through option callback functions.
+    - CVE-2024-22667
+
+ -- Ian Constantin <ian.constantin@canonical.com>  Thu, 14 Mar 2024 11:29:25 +0200
+
 vim (2:8.1.2269-1ubuntu5.21) focal-security; urgency=medium
 
   * SECURITY UPDATE: NULL pointer dereference
