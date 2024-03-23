@@ -1,3 +1,9 @@
+vim (2:8.1.2269-1ubuntu5.22bb1) focal; urgency=medium
+
+  * Balabit patched version
+
+ -- Balabit Platform Team <devnull@dev.null>  Sat, 23 Mar 2024 15:26:34 +0000
+
 vim (2:8.1.2269-1ubuntu5.22) focal-security; urgency=medium
 
   * SECURITY UPDATE: stack based buffer overflow
