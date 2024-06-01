@@ -1,3 +1,9 @@
+vim (2:8.1.2269-1ubuntu5.23) focal; urgency=medium
+
+  * Ensure Ubuntu codenames are current (LP: #2064687).
+
+ -- Simon Quigley <tsimonq2@ubuntu.com>  Thu, 02 May 2024 21:36:35 -0500
+
 vim (2:8.1.2269-1ubuntu5.22bb1) focal; urgency=medium
 
   * Balabit patched version
