@@ -139,3 +139,5 @@ CVE-2023-48236.patch
 CVE-2023-48237.patch
 CVE-2024-22667.patch
 ubuntu-codenames.patch
+CVE-2024-41957.patch
+CVE-2024-43374.patch
