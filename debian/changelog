@@ -1,3 +1,12 @@
+vim (2:8.1.2269-1ubuntu5.25) focal-security; urgency=medium
+
+  * SECURITY UPDATE: buffer overflow
+    - debian/patches/CVE-2024-43802.patch: check buflen before advancing
+      offset.
+    - CVE-2024-43802
+
+ -- Vyom Yadav <vyom.yadav@canonical.com>  Wed, 25 Sep 2024 10:48:33 +0530
+
 vim (2:8.1.2269-1ubuntu5.24bb1) focal; urgency=medium
 
   * Balabit patched version
