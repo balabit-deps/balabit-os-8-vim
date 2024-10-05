@@ -1,3 +1,9 @@
+vim (2:8.1.2269-1ubuntu5.25bb1) focal; urgency=medium
+
+  * Balabit patched version
+
+ -- Balabit Platform Team <devnull@dev.null>  Sat, 05 Oct 2024 14:24:52 +0000
+
 vim (2:8.1.2269-1ubuntu5.25) focal-security; urgency=medium
 
   * SECURITY UPDATE: buffer overflow
