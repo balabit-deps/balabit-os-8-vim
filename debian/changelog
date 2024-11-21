@@ -1,3 +1,14 @@
+vim (2:8.1.2269-1ubuntu5.29) focal-security; urgency=medium
+
+  * SECURITY UPDATE: Use after free when closing a buffer.
+    - debian/patches/CVE-2024-47814.patch: Add buf_locked() in src/buffer.c.
+      Abort autocommands editing a file when buf_locked() in src/ex_cmds.c.
+      Add buf_locked() in src/proto/buffer.pro.
+    - CVE-2024-47814
+  * debian/patches/skip-flaky-tests.patch: Skip failing tests.
+
+ -- Hlib Korzhynskyy <hlib.korzhynskyy@canonical.com>  Thu, 21 Nov 2024 14:42:44 -0330
+
 vim (2:8.1.2269-1ubuntu5.26) focal; urgency=medium
 
   * Ensure Ubuntu codenames are current (LP: #2084706).
