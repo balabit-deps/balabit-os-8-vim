@@ -1,3 +1,13 @@
+vim (2:8.1.2269-1ubuntu5.31) focal-security; urgency=medium
+
+  * SECURITY UPDATE: Denial of service
+    - debian/patches/CVE-2025-24014.patch: fix a segfault in win_line()
+      in files src/gui.c, src/testdir/crash/ex_redraw_crash,
+      src/testdir/test_crash.vim.
+    - CVE-2025-24014
+
+ -- Leonidas Da Silva Barbosa <leo.barbosa@canonical.com>  Mon, 03 Feb 2025 09:35:26 -0300
+
 vim (2:8.1.2269-1ubuntu5.30) focal-security; urgency=medium
 
   * SECURITY UPDATE: Heap-buffer-overflow when switching buffers.
